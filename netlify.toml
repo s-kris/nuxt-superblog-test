@@ -1,3 +1,25 @@
 [build]
   publish = "dist"
   command = "yarn generate"
+
+
+ 
+        [[redirects]]
+          from = "/blog"
+          to = "https://nuxttest.superblog.cloud/"
+          status = 200
+
+        [[redirects]]
+          from = "/blog/*"
+          to = "https://nuxttest.superblog.cloud/:splat"
+          status = 200
+
+        [[redirects]]
+          from = "/_elderjs/*"
+          to = "https://nuxttest.superblog.cloud/_elderjs/:splat"
+          status = 200 
+
+        [[redirects]]
+          from = "*"
+          to = "/"
+          status = 200 
